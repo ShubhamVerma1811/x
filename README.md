@@ -2,6 +2,26 @@
 
 Manage your bookmarks seamlessly from the command line with **x**. This tool offers a range of commands to simplify bookmarking tasks, enhancing your workflow effortlessly.
 
+## Pre-requists
+
+You need to have [Go](https://go.dev/doc/install) and [Sqlite](https://www.sqlite.org/download.html) installed in your machine.
+
+## Installation
+
+`go install github.com/ShubhamVerma1811/x`
+
+Running without adding to PATH
+
+`$HOME/go/bin/x`
+
+With adding to PATH
+
+`echo 'export PATH=$PATH/yourhomepath/go/bin' >> ~/.zshrc # or ~/.bashrc or perferred shell.`
+
+From the official docs:
+
+> The install directory is controlled by the GOPATH and GOBIN environment variables. If GOBIN is set, binaries are installed to that directory. If GOPATH is set, binaries are installed to the bin subdirectory of the first directory in the GOPATH list. Otherwise, binaries are installed to the bin subdirectory of the default GOPATH ($HOME/go or %USERPROFILE%\go).
+
 ## Usage
 
 ```sh

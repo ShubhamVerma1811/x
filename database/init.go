@@ -1,7 +1,12 @@
 package database
 
 import (
+	"fmt"
+
 	"github.com/ShubhamVerma1811/x/model"
+
+	"os"
+	"path/filepath"
 
 	"gorm.io/driver/sqlite"
 	"gorm.io/gorm"
@@ -16,7 +21,16 @@ func GetDB() *gorm.DB {
 
 func SetupDB() (*gorm.DB, error) {
 	var err error
-	db, err = gorm.Open(sqlite.Open("x.db"), &gorm.Config{
+
+	xDir := filepath.Join(os.Getenv("HOME"), ".config", "x")
+	dbPath := filepath.Join(xDir, "x.db")
+
+	if _, err := os.Stat(xDir); os.IsNotExist(err) {
+		fmt.Println("Creating the database at", dbPath)
+		os.MkdirAll(xDir, os.ModePerm)
+	}
+
+	db, err = gorm.Open(sqlite.Open(dbPath), &gorm.Config{
 		TranslateError: true,
 		// Logger:         logger.Default.LogMode(logger.Info),
 	})
@@ -30,5 +44,4 @@ func SetupDB() (*gorm.DB, error) {
 	}
 
 	return db, nil
-
 }
