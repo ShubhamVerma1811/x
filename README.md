@@ -8,15 +8,21 @@ You need to have [Go](https://go.dev/doc/install) and [Sqlite](https://www.sqlit
 
 ## Installation
 
-`go install github.com/ShubhamVerma1811/x`
+```sh
+go install github.com/ShubhamVerma1811/x
+```
 
 Running without adding to PATH
 
-`$HOME/go/bin/x`
+```sh
+$HOME/go/bin/x
+```
 
 With adding to PATH
 
-`echo 'export PATH=$PATH/yourhomepath/go/bin' >> ~/.zshrc # or ~/.bashrc or perferred shell.`
+```sh
+echo 'export PATH=$PATH/yourhomepath/go/bin' >> ~/.zshrc # or ~/.bashrc or perferred shell.
+```
 
 From the official docs:
 
