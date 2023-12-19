@@ -4,7 +4,7 @@ Manage your bookmarks seamlessly from the command line with **x**. This tool off
 
 ## Pre-requists
 
-You need to have [Go](https://go.dev/doc/install) and [Sqlite](https://www.sqlite.org/download.html) installed in your machine.
+You need to have [Go](https://go.dev/doc/install) and [Sqlite](https://www.sqlite.org/download.html) installed on your machine.
 
 ## Installation
 
